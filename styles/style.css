@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 43.5% 31.3% 25.2%;
   justify-content: space-between;
-  margin: 108px 24px 92px;
+  margin: 91px 24px 95px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.13px;
@@ -14,19 +14,16 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 109px;
   width: 94.1%;
   gap: 5px;
   list-style: circle;
+  margin-top: 41px;
 }
 .header__links-list-item_no-bullit {
   list-style: none;
 }
-.header__link {
+.link-active {
   text-decoration: none;
-}
-.header__link_active {
-  text-decoration: underline;
 }
 .header__logo {
   width: 148px;
@@ -38,7 +35,6 @@
   width: 93.5%;
 }
 .address {
-  align-self: center;
   font-size: 18px;
   font-weight: 400;
   line-height: 24.3px;
@@ -53,14 +49,13 @@ p {
   position: relative;
   z-index: 5;
   margin: 0px;
+  padding: 0px;
   width: 1100px;
-  height: 760px;
-  border-color: white;
-  border-width: 0.5px;
-  border-style: solid;
-  background-image: url(/ono-tebe-nado/images/cover.jpg);
+  min-height: max-content;
+  border: solid 0.1px transparent;
+  background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
-  background-size: 1100px 757px;
+  background-size: 1100px 759px;
 }
 .overlay {
   display: block;
@@ -84,23 +79,23 @@ p {
   text-transform: uppercase;
 }
 .aligned-text {
-  letter-spacing: 1px;
+  letter-spacing: 30px;
 }
 .aligned-text_center {
-  align-self: center;
+  align-self: flex-end;
   letter-spacing: 30px;
-  line-height: 133px;
+  line-height: 156px;
 }
 .letter-spacing-extended-center {
-  letter-spacing: 50px;
+  margin-right: 300px;
 }
 .aligned-text_right {
   align-self: flex-end;
-  letter-spacing: 26px;
-  line-height: 120px;
+  letter-spacing: 29px;
+  line-height: 113px;
 }
 .letter-spacing-extended-end {
-  letter-spacing: 20px;
+  letter-spacing: 4px;
 }
 .letter-spacing-extended-left {
   letter-spacing: 30px;
@@ -114,13 +109,12 @@ p {
   justify-content: space-between;
   align-items: center;
   z-index: 6;
-  margin: 125px 50px 41px;
+  margin: 107px 50px 41px;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
 }
 .cover__description-text {
-  padding-left: 29px;
   word-spacing: 20px;
   font-size: 22px;
   font-weight: 500;
@@ -134,15 +128,13 @@ p {
   width: 256px;
   height: 51px;
   border: 1px solid #ffffff;
-  color: #ffffff;
+  background-color: transparent;
   text-transform: uppercase;
+  color: #ffffff;
 }
 .lots {
-  display: flex;
-  flex-direction: column;
-  margin: 179px 24px 0px;
+  margin: 188px 24px 0px;
   width: 1052px;
-  height: 692px;
   top: 1229px;
   left: 24px;
   gap: 0px;
@@ -160,23 +152,34 @@ p {
   display: grid;
   grid-template-columns: 334px 334px 334px;
   grid-column-gap: 25px;
-  padding-top: 27px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 32px;
   list-style-type: none;
 }
 .lots__card-list-item {
   width: 334px;
-  height: 563px;
+  min-height: 596px;
   flex-grow: 1;
 }
 .card {
+  display: block;
+  position: sticky;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.cards {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
+  text-decoration: none;
+  border: solid 0.1px transparent;
+  z-index: -1;
 }
 .card__title {
-  margin: 51px 40px 0px;
+  margin: 50px 40px 0px 40px;
   font-size: 22px;
   font-weight: 700;
   line-height: 26.4px;
@@ -185,51 +188,29 @@ p {
 }
 .card-link {
   text-transform: uppercase;
+  text-decoration: underline white;
 }
 .card__text {
-  margin: 0px 40px 48px;
+  margin: 0px 40px 46px;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
   color: #ffffff;
+  text-decoration: none;
 }
 .card_type_film {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 334px;
-  height: 563px;
-  border-color: white;
-  border-width: 0.1px;
-  border-style: solid;
-  background-image: url(/ono-tebe-nado/images/card-lot-01.jpg);
+  background-image: url(../images/card-lot-01.jpg);
   background-size: cover;
   background-position: bottom;
 }
 .card_type_book {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 334px;
-  height: 563px;
-  border-color: white;
-  border-width: 0.1px;
-  border-style: solid;
-  background-image: url(/ono-tebe-nado/images/card-lot-02.jpg);
+  background-image: url(../images/card-lot-02.jpg);
   background-size: cover;
   background-position: center;
 }
 .card_type_picture {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 334px;
-  height: 563px;
-  border-color: white;
-  border-width: 0.1px;
-  border-style: solid;
-  background-image: url(/ono-tebe-nado/images/card-lot-03.jpg);
+  background-image: url(../images/card-lot-03.jpg);
   background-size: cover;
   background-position: bottom;
 }
@@ -242,23 +223,23 @@ p {
   color: black;
 }
 .about {
-  margin: 146px 24px 0px;
+  margin: 119px 24px 0px;
 }
 .about__column {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 8px;
 }
-.first_column {
+.logo_column {
   display: flex;
   justify-content: center;
   padding-top: 33px;
   padding-right: 13px;
 }
-.second_column {
+.text_column {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: space-between;
 }
 .about__logo {
   width: 240px;
@@ -278,18 +259,16 @@ p {
   gap: 0px;
 }
 .about__text {
-  display: grid;
-  grid-template-rows: 50% 50%;
-  row-gap: 30px;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.01em;
   text-align: left;
-  word-spacing: 2.5px;
+  word-spacing: -0.5px;
+  padding-bottom: 23px;
 }
 .about__title {
-  margin: 136px 0px 96px;
+  margin: 136px 0px 100px;
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
@@ -300,10 +279,11 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 147px 50px 88px;
+  margin: 157px 50px 88px;
+  min-height: 180px;
 }
 .footer__menu-list {
-    padding-left: 41px;
+  padding-left: 3px;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
