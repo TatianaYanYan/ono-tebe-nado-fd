@@ -35,6 +35,7 @@
   width: 93.5%;
 }
 .address {
+  font-style: normal;
   font-size: 18px;
   font-weight: 400;
   line-height: 24.3px;
@@ -56,12 +57,13 @@ p {
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: 1100px 759px;
+  background-position: center;
 }
 .overlay {
   display: block;
   position: absolute;
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
   top: 0;
@@ -82,12 +84,12 @@ p {
   letter-spacing: 30px;
 }
 .aligned-text_center {
-  align-self: flex-end;
+  align-self: center;
   letter-spacing: 30px;
   line-height: 156px;
 }
 .letter-spacing-extended-center {
-  margin-right: 300px;
+  margin-right: -0.3em;
 }
 .aligned-text_right {
   align-self: flex-end;
@@ -124,7 +126,6 @@ p {
 }
 .bet-button {
   margin-left: 4px;
-  padding: 12px 32px 11px 32px;
   width: 256px;
   height: 51px;
   border: 1px solid #ffffff;
@@ -151,7 +152,7 @@ p {
 .lots__card-list {
   display: grid;
   grid-template-columns: 334px 334px 334px;
-  grid-column-gap: 25px;
+  gap: 25px;
   padding-top: 25px;
   padding-bottom: 32px;
   list-style-type: none;
@@ -168,6 +169,8 @@ p {
   width: 100%;
   height: 100%;
   text-decoration: none;
+  background-size: cover;
+  background-position: bottom;
 }
 .cards {
   display: flex;
@@ -177,6 +180,7 @@ p {
   text-decoration: none;
   border: solid 0.1px transparent;
   z-index: -1;
+  position: relative;
 }
 .card__title {
   margin: 50px 40px 0px 40px;
@@ -185,8 +189,6 @@ p {
   line-height: 26.4px;
   text-align: left;
   color: #ffffff;
-}
-.card-link {
   text-transform: uppercase;
   text-decoration: underline white;
 }
@@ -201,18 +203,12 @@ p {
 }
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: bottom;
 }
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
 }
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: bottom;
 }
 .lots__look-more-link {
   padding-left: 40px;
@@ -279,8 +275,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 157px 50px 88px;
-  min-height: 180px;
+  padding: 157px 50px 88px 50px;
 }
 .footer__menu-list {
   padding-left: 3px;
